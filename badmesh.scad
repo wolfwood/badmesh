@@ -10,5 +10,6 @@ cube([outer,outer,thickness],true);
 translate([-overhang -outer/2,-outer/2,-thickness/2]) {
   cube([overhang,outer,thickness]);
   translate([0, 0, -width/2]) cube([width, outer, width/2]);
+  // comment the above and this version, with no co-incident faces, still fails
   *translate([2, 1, -width/2]) cube([width - 1,outer -2, 2+width/2]);
 }
